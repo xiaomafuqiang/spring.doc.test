@@ -1,4 +1,4 @@
-package net.htmlonline.test;
+package net.htmlonline.init;
 
 import net.htmlonline.beans.InitClassBean;
 import net.htmlonline.util.BaseJunit4Test;
