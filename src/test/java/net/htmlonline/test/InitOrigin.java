@@ -1,14 +1,17 @@
-package net.htmlonline.beans;
+package net.htmlonline.test;
 
+import net.htmlonline.beans.InitClassBean;
+import net.htmlonline.util.BaseJunit4Test;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-public class InitClassBeanT {
-    private ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+public class InitOrigin extends BaseJunit4Test {
+    private ApplicationContext context = getContext();
 
-    private InitClassBeanT(){
+    @Test
+    public void init(){
         String applicationName = context.getApplicationName();
         System.out.println("applicationName::::: " + applicationName);
         ApplicationContext parent = context.getParent();
@@ -28,10 +31,6 @@ public class InitClassBeanT {
         String[] initClassBeans = context.getAliases("initClassBean");
         System.out.println(Arrays.toString(initClassBeans) + " ::::::");
 
-    }
-
-    public static void main(String[] args) {
-        new InitClassBeanT();
     }
 
 }
