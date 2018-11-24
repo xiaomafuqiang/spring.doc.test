@@ -19,7 +19,7 @@ public class SetterDiBean {
                 ", age=" + age +
                 ", name='" + name + '\'' +
                 ", myProperties=" + Arrays.toString(myProperties) +
-                '}';
+                "}[" + hashCode() + "]" ;
     }
 
 

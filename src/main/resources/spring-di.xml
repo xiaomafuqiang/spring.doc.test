@@ -26,6 +26,8 @@
         </property>
 
     </bean>
+    <bean name="setterDiBean22" class="net.htmlonline.beans.di.SetterDiBean"/>
+
 
     <!-- depends-on 表示初始化顺序指定依赖 -->
     <!-- constructor di-->
@@ -39,4 +41,11 @@
         <constructor-arg value="1" type="java.lang.Integer"/>
         <constructor-arg value="小马"/>
     </bean>
+
+
+
+    <!-- lazy init -->
+    <bean class="net.htmlonline.beans.di.LazyInit"/>
+    <bean class="net.htmlonline.beans.di.LazyInit"/>
+    <bean class="net.htmlonline.beans.di.LazyInit" lazy-init="true"/>
 </beans>
