@@ -2,16 +2,42 @@ package net.htmlonline.beans.di;
 
 import net.htmlonline.beans.alphabet.BeanA;
 
+import java.util.Arrays;
+
 public class SetterDiBean {
 
     private BeanA beanA;
+    private Integer age;
+    private String name;
 
-    public BeanA getBeanA() {
-        return beanA;
+    private String[] myProperties;
+
+    @Override
+    public String toString() {
+        return "SetterDiBean{" +
+                "beanA=" + beanA +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                ", myProperties=" + Arrays.toString(myProperties) +
+                '}';
+    }
+
+
+    public void setMyProperties(String[] myProperties) {
+        System.out.println(Arrays.toString(myProperties));
+        this.myProperties = myProperties;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public void setBeanA(BeanA beanA) {
-        System.out.println(beanA);
         this.beanA = beanA;
     }
+
 }

@@ -6,10 +6,18 @@
     <!-- setter ... -->
     <bean class="net.htmlonline.beans.di.SetterDiBean">
         <property name="beanA" ref="beanA"/>
+        <property name="age" value="18"/>
+        <property name="name" value="小王"/>
+    </bean>
+
+    <!-- constructor di-->
+    <bean class="net.htmlonline.beans.di.ConstructorDiBean">
+        <constructor-arg value="1" type="java.lang.Integer"/>
+        <constructor-arg value="小马"/>
     </bean>
 
     <!-- factory di-->
-    <bean class="net.htmlonline.beans.di.FactoryMethodBean" factory-method="createInstance">
+    <bean class="net.htmlonline.beans.di.FactoryMethodDiBean" factory-method="createInstance">
         <constructor-arg value="1" type="java.lang.Integer"/>
         <constructor-arg value="小马"/>
     </bean>
