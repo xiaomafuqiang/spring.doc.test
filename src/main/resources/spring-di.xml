@@ -17,6 +17,14 @@
         <property name="age" value="19"/>
         <!--<property name="name" value="小王"/>-->
 
+        <!-- properties -->
+        <property name="myProperties">
+            <list>
+                <value>a8</value>
+                <value>a9</value>
+            </list>
+        </property>
+
     </bean>
 
     <!-- constructor di-->

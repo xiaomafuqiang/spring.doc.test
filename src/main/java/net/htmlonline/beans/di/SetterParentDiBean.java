@@ -23,7 +23,6 @@ public class SetterParentDiBean {
     }
 
     public void setMyProperties(String[] myProperties) {
-        System.out.println(Arrays.toString(myProperties));
         this.myProperties = myProperties;
     }
 

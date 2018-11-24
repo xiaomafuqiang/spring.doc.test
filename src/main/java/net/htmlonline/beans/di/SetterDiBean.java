@@ -24,7 +24,6 @@ public class SetterDiBean {
 
 
     public void setMyProperties(String[] myProperties) {
-        System.out.println(Arrays.toString(myProperties));
         this.myProperties = myProperties;
     }
 
