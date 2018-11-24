@@ -11,7 +11,7 @@
     </bean>
 
     <!-- setter di -->
-    <bean class="net.htmlonline.beans.di.SetterDiBean" parent="parentTemp">
+    <bean name="setterDiBean" class="net.htmlonline.beans.di.SetterDiBean" parent="parentTemp">
         <property name="beanA" ref="beanA"/>
         <!-- override age -->
         <property name="age" value="19"/>
