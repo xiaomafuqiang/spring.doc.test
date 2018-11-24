@@ -7,6 +7,8 @@ public class ConstructorDiBean {
 
 
     public ConstructorDiBean(Integer age, String name){
+        System.out.println("------------------------");
+        System.out.println("init constructor> " + getClass().getName());
         this.age = age;
         this.name = name;
     }

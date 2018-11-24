@@ -27,14 +27,15 @@
 
     </bean>
 
+    <!-- depends-on 表示初始化顺序指定依赖 -->
     <!-- constructor di-->
-    <bean class="net.htmlonline.beans.di.ConstructorDiBean">
+    <bean name="constructorDiBean" class="net.htmlonline.beans.di.ConstructorDiBean" depends-on="factoryMethodDiBean">
         <constructor-arg value="1" type="java.lang.Integer"/>
         <constructor-arg value="小马"/>
     </bean>
 
     <!-- factory di-->
-    <bean class="net.htmlonline.beans.di.FactoryMethodDiBean" factory-method="createInstance">
+    <bean name="factoryMethodDiBean" class="net.htmlonline.beans.di.FactoryMethodDiBean" factory-method="createInstance">
         <constructor-arg value="1" type="java.lang.Integer"/>
         <constructor-arg value="小马"/>
     </bean>
