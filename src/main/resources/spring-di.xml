@@ -3,11 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- setter ... -->
-    <bean class="net.htmlonline.beans.di.SetterDiBean">
-        <property name="beanA" ref="beanA"/>
+    <!--<bean id="parentTemp" class="net.htmlonline.beans.di.SetterParentDiBean">-->
+    <!--<bean id="parentTemp" abstract="true">-->
+    <bean id="parentTemp" lazy-init="true">
         <property name="age" value="18"/>
         <property name="name" value="小王"/>
+    </bean>
+
+    <!-- setter di -->
+    <bean class="net.htmlonline.beans.di.SetterDiBean" parent="parentTemp">
+        <property name="beanA" ref="beanA"/>
+        <!-- override age -->
+        <property name="age" value="19"/>
+        <!--<property name="name" value="小王"/>-->
+
     </bean>
 
     <!-- constructor di-->
