@@ -2,6 +2,7 @@ package net.htmlonline.test.di;
 
 import net.htmlonline.beans.di.ConstructorDiBean;
 import net.htmlonline.beans.di.FactoryMethodDiBean;
+import net.htmlonline.beans.di.LookUpDiBean;
 import net.htmlonline.beans.di.SetterDiBean;
 import net.htmlonline.util.BaseJunit4Test;
 import org.junit.Test;
@@ -42,6 +43,11 @@ public class DiBeanTest extends BaseJunit4Test {
     @Autowired
     private ConstructorDiBean constructorDiBean;
 
+
+    // lookup method abstract
+    @Autowired
+    private LookUpDiBean lookUpDiBean;
+
     @Test
     public void run(){
 
@@ -52,5 +58,8 @@ public class DiBeanTest extends BaseJunit4Test {
         System.out.println(setterDiBean3);
 
         System.out.println(constructorDiBean);
+
+        System.out.println(lookUpDiBean);
+        lookUpDiBean.processAny();
     }
 }

@@ -48,4 +48,11 @@
     <bean class="net.htmlonline.beans.di.LazyInit"/>
     <bean class="net.htmlonline.beans.di.LazyInit"/>
     <bean class="net.htmlonline.beans.di.LazyInit" lazy-init="true"/>
+
+
+
+    <!-- lookup inject -->
+    <bean name="lookUpDiBean" class="net.htmlonline.beans.di.LookUpDiBean">
+        <lookup-method name="createBeanA" bean="beanA"/>
+    </bean>
 </beans>
