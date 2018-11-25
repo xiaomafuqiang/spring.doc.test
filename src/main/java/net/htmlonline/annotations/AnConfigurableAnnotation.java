@@ -2,21 +2,27 @@ package net.htmlonline.annotations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AnConfigurableAnnotation {
 
     @Bean
-    public List<String> abcd(){
-        ArrayList<String> integers = new ArrayList<>();
-        integers.add("a");
-        integers.add("b");
-        integers.add("c");
-        integers.add("d");
-        return integers;
+    @Scope("prototype")
+    public OneBean abcd(){
+        return new OneBean();
+    }
+
+
+    @Bean
+    public String one(){
+//        System.out.println(abcd().hashCode());
+        return "one";
+    }
+
+    @Bean
+    public String two(){
+//        System.out.println(abcd().hashCode());
+        return "two";
     }
 }

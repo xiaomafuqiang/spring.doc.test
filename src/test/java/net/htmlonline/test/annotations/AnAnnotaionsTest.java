@@ -29,7 +29,9 @@ public class AnAnnotaionsTest {
 //        List<Integer> abc = context.getBean(List.class);
 //        List<Integer> abc = context.getBean("abc", List.class);
 //        System.out.println(abc);
-//        Object abcd = context.getBean("abcd");
-//        System.out.println(abcd);
+        Object abcd = context.getBean("abcd");
+        System.out.println(abcd.hashCode());
+        abcd = context.getBean("abcd");
+        System.out.println(abcd.hashCode());
     }
 }
