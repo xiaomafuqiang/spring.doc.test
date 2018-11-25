@@ -32,7 +32,7 @@ public class DiBeanTest extends BaseJunit4Test {
 
     @Autowired
     // 开启 byName
-    // 否则报错
+    // 否则报错 or  primary="true" 指定冲突首选
     @Qualifier("setterDiBean22")
     private SetterDiBean setterDiBean2;
 
