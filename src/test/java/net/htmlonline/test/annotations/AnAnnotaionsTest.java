@@ -5,8 +5,6 @@ import net.htmlonline.annotations.AnConfigurableAnnotation;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.List;
-
 public class AnAnnotaionsTest {
 
     private AnnotationConfigApplicationContext getContext(){
