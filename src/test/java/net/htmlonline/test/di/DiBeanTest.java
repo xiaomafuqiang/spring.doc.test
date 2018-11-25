@@ -51,15 +51,15 @@ public class DiBeanTest extends BaseJunit4Test {
     @Test
     public void run(){
 
-        System.out.println(factoryMethodDiBean);
-
-        System.out.println(setterDiBean);
-        System.out.println(setterDiBean2);
-        System.out.println(setterDiBean3);
-
-        System.out.println(constructorDiBean);
-
-        System.out.println(lookUpDiBean);
-        lookUpDiBean.processAny();
+//        System.out.println(factoryMethodDiBean);
+//
+//        System.out.println(setterDiBean);
+//        System.out.println(setterDiBean2);
+//        System.out.println(setterDiBean3);
+//
+//        System.out.println(constructorDiBean);
+//
+//        System.out.println(lookUpDiBean);
+//        lookUpDiBean.processAny();
     }
 }

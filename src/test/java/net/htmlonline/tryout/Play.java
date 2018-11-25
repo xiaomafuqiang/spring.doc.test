@@ -11,11 +11,11 @@ public class Play {
     @Test
     public void run() throws IOException {
 //        InputStream inputStream = new FileInputStream(new File("target/classes/properties/di.properties"));
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("properties/di.properties");
+//        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("properties/di.properties");
 
-        properties.load(inputStream);
-        String property = properties.getProperty("a.b");
-        System.out.println(property);
+//        properties.load(inputStream);
+//        String property = properties.getProperty("a.b");
+//        System.out.println(property);
 
     }
 }

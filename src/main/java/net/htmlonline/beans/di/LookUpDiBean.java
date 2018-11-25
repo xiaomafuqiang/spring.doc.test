@@ -6,7 +6,7 @@ public abstract class LookUpDiBean {
 
     public void processAny(){
         BeanA beanA = createBeanA();
-        System.out.println(beanA);
+//        System.out.println(beanA);
     }
 
     public abstract BeanA createBeanA();

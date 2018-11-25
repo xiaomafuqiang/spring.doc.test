@@ -21,13 +21,11 @@ public class InitImplClassBean implements InitializingBean, DisposableBean,
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println(beanName + "bean name");
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println(bean);
         return bean;
     }
 
@@ -60,21 +58,21 @@ public class InitImplClassBean implements InitializingBean, DisposableBean,
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("destroy");
+//        System.out.println("destroy");
     }
 
     public void destroyMethod (){
-        System.out.println("my destroy");
+//        System.out.println("my destroy");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println(applicationContext + " +0-00-0-0-0-0-0");
+//        System.out.println(applicationContext + " +0-00-0-0-0-0-0");
     }
 
     @Override
     public void setBeanName(String s) {
-        System.out.println("bean name Aware.." + s);
+//        System.out.println("bean name Aware.." + s);
     }
 
     @Override

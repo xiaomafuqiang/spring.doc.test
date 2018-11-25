@@ -11,7 +11,7 @@ public class InitUnit extends BaseJunit4Test {
     private InitClassBean initClassBean2;
     @Test
     public void runWith(){
-        System.out.println(initClassBean2);
+//        System.out.println(initClassBean2);
     }
 
 }

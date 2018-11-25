@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- init -->
-    <!--<bean id="initClassBean" class="net.htmlonline.beans.InitClassBean"/>-->
+    <bean id="initClassBean" class="net.htmlonline.beans.InitClassBean"/>
     <bean id="initImplClassBean" class="net.htmlonline.beans.InitImplClassBean" destroy-method="destroyMethod"/>
     <!-- for test scope -->
     <!--<bean id="initClassBean" class="net.htmlonline.beans.InitClassBean" scope="myscope"/>-->
