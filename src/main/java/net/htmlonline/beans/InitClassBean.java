@@ -39,4 +39,8 @@ public class InitClassBean implements InitializingBean, DisposableBean {
     public void destroy() throws Exception {
         System.out.println("destroy");
     }
+
+    public void destroyMethod (){
+        System.out.println("my destroy");
+    }
 }
