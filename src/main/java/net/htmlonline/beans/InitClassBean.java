@@ -1,8 +1,9 @@
 package net.htmlonline.beans;
 
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class InitClassBean implements InitializingBean {
+public class InitClassBean implements InitializingBean, DisposableBean {
 
     @Override
     public String toString() {
@@ -11,7 +12,8 @@ public class InitClassBean implements InitializingBean {
     }
 
     // test life cycle implementation mode
-    // no use vs init-method or after destruct
+    // no use vs init-method or after postConstruct
+    // no use vs destroy-method or after preDestroy
     @Override
     public void afterPropertiesSet() throws Exception {
         try {
@@ -31,5 +33,10 @@ public class InitClassBean implements InitializingBean {
 
             }
         }
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("destroy");
     }
 }
