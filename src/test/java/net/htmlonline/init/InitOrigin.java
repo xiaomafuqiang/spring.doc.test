@@ -37,4 +37,11 @@ public class InitOrigin extends BaseJunit4Test {
 
     }
 
+    @Test
+    public void implRun(){
+        // 需要 bean 实现 FactoryBean接口
+        Object bean = context.getBean("&initImplClassBean");
+        System.out.println(bean);
+    }
+
 }
