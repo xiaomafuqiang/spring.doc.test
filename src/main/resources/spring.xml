@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <import resource="classpath*:spring-*.xml"/>
     <!--<import resource="spring-default.xml"/>-->
+
+
+    <!-- 开启注解配置启用 @Autowired @Configuration -->
+    <!--<context:annotation-config />-->
+    <!-- @Configuration 本质也是 bean 主要开启注解当成普通class 所以可以 @Component * 代替 @Configuration(对于cglib 还是有区别) -->
+    <!--<bean class="net.htmlonline.conditional.ConditionalConfig"/>-->
+
+
 </beans>

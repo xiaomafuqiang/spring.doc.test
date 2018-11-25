@@ -3,8 +3,10 @@ package net.htmlonline.conditional;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Configuration
+//@Component // can replace configuration
 //@Conditional({ConditionalControl.class})
 public class ConditionalConfig {
 
