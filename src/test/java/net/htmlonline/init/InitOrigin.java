@@ -2,16 +2,20 @@ package net.htmlonline.init;
 
 import net.htmlonline.beans.InitClassBean;
 import net.htmlonline.util.BaseJunit4Test;
+import net.htmlonline.util.MyScope;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Arrays;
 
 public class InitOrigin extends BaseJunit4Test {
-    private ApplicationContext context = getContext();
+    private ConfigurableApplicationContext context = getContext();
+
 
     @Test
     public void init(){
+//        context.getBeanFactory().registerScope("myscope", new MyScope()); // test scope
         String applicationName = context.getApplicationName();
         System.out.println("applicationName::::: " + applicationName);
         ApplicationContext parent = context.getParent();

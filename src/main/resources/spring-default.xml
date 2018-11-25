@@ -5,5 +5,7 @@
 
     <!-- init -->
     <bean id="initClassBean" class="net.htmlonline.beans.InitClassBean"/>
+    <!-- for test scope -->
+    <!--<bean id="initClassBean" class="net.htmlonline.beans.InitClassBean" scope="myscope"/>-->
     <alias name="initClassBean" alias="initClassBean2"/>
 </beans>
