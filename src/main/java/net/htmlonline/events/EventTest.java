@@ -1,18 +1,30 @@
 package net.htmlonline.events;
 
-import net.htmlonline.conditional.ConditionalConfig;
+import net.htmlonline.events.custom.DemoEventPublisher;
 import net.htmlonline.util.BaseJunit4Test;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class EventTest extends BaseJunit4Test {
+    private ApplicationContext context = getContext(); // using it first should add config to xml config
 
     @Test
-    public void run(){
-        ConfigurableApplicationContext context = getContext(); // using it first should add config to xml config
-        EmailService emailService = context.getBean("emailService", EmailService.class);
-        emailService.sendEmail("m@outlook.com", getClass().getName());
+    // buildInEventBean
+    public void buildInEventBean() {
+        // BuildInEventBean eventBean = context.getBean("buildInEventBean", BuildInEventBean.class);
+    }
 
+
+    @Test
+    // customer event
+    public void customEvent() {
+        DemoEventPublisher demoEventPublisher = context.getBean("demoEventPublisher", DemoEventPublisher.class);
+        demoEventPublisher.pushList("张三1", "565792147@qq.com");
+        demoEventPublisher.pushList("张三2", "565792147@qq.com");
+        demoEventPublisher.pushList("张三3", "565792147@qq.com");
+        demoEventPublisher.pushList("张三4", "565792147@qq.com");
+        demoEventPublisher.pushList("张三5", "565792147@qq.com");
     }
 }
