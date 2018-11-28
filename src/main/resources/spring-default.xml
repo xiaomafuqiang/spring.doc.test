@@ -8,5 +8,5 @@
     <bean id="initImplClassBean" class="net.htmlonline.beans.InitImplClassBean" destroy-method="destroyMethod"/>
     <!-- for test scope -->
     <!--<bean id="initClassBean" class="net.htmlonline.beans.InitClassBean" scope="myscope"/>-->
-    <!--<alias name="initClassBean" alias="initClassBean2"/>-->
+    <alias name="initClassBean" alias="initClassBean2"/>
 </beans>
