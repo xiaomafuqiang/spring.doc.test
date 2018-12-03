@@ -13,7 +13,7 @@ public class MessageSourceConfig {
 //        <value>exceptions</value>
 //        <value>windows</value>
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasenames("format", "exceptions", "window");
+        messageSource.setBasenames("message/format", "message/exceptions", "message/window");
         return messageSource;
     }
 }
