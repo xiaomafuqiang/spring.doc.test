@@ -6,7 +6,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <mvc:annotation-driven/>
-    <context:component-scan base-package="net.htmlonline.validation"/>
+    <!--<context:component-scan base-package="net.htmlonline.validation,net.htmlonline.mvc"/>-->
+    <context:component-scan base-package="net.htmlonline.mvc"/>
 
     <!--<bean class="net.htmlonline.validation.CustomerController"/>-->
 
