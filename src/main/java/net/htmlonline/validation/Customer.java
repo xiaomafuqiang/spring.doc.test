@@ -10,12 +10,22 @@ public class Customer {
     @NotNull
     private Integer age;
 
+    @Min(value = 10)
+    private Integer num;
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
     public Integer getAge() {
         return age;
     }
 
     public void setAge(Integer age) {
-        System.out.println(age);
         this.age = age;
     }
 
