@@ -8,7 +8,11 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 @Configuration
 public class Config {
-   Validator validator;
+
+    @Bean
+    public Customer customer(){
+        return new Customer();
+    }
 
 
 }

@@ -1,15 +1,21 @@
 package net.htmlonline.validation;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.DataBinder;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+@ContextConfiguration(classes = Config.class)
 public class Tests {
 
-    private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+//    private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+
+
     @Test
     public void run() {
         Customer customer = new Customer();
