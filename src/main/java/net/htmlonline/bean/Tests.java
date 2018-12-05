@@ -1,5 +1,6 @@
-package net.htmlonline.bean.property.editor;
+package net.htmlonline.bean;
 
+import net.htmlonline.bean.property.editor.Telephone;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -16,4 +17,5 @@ public class Tests {
         System.out.println(telephone);
 
     }
+
 }
